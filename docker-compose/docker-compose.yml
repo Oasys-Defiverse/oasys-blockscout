@@ -17,6 +17,11 @@ services:
       - redis_db
 
     image: blockscout/blockscout:${DOCKER_TAG:-latest}
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
     build:
       context: ..
       dockerfile: ./docker/Dockerfile
