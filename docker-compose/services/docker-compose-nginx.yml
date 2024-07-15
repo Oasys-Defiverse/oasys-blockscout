@@ -3,6 +3,7 @@ version: '3.8'
 services:  
   proxy:
     image: nginx
+    platform: linux/x86_64
     volumes:
       - type: bind
         source: ../proxy/nginx.conf

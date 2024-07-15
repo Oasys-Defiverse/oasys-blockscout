@@ -3,6 +3,7 @@ version: '3.8'
 services:
   visualizer:
     image: ghcr.io/blockscout/visualizer:${VISUALIZER_DOCKER_TAG:-latest}
+    platform: linux/x86_64
     pull_policy: always
     restart: always
     container_name: 'visualizer'

@@ -3,6 +3,7 @@ version: '3.8'
 services:
   smart-contract-verifier:
     image: ghcr.io/blockscout/smart-contract-verifier:${SMART_CONTRACT_VERIFIER_DOCKER_TAG:-latest}
+    platform: linux/x86_64
     pull_policy: always
     restart: always
     container_name: 'smart-contract-verifier'
